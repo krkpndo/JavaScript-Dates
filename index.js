@@ -5,10 +5,45 @@
 
 // console.log(dateToday.toDateString());
 // console.log(dateToday.toString());
-// console.log(dateToday.toLocaleString());
 // console.log(dateToday);
 // console.log(dateToday.toUTCString());
 // console.log(dateToday.toISOString());
+
+/*
+    toLocaleString()
+    - Formats both date AND time according to locale.
+    - Syntax: date.toLocaleString([locales], [options])
+
+    Example:
+    const date = new Date(2024, 8, 29, 14, 30, 45); // Sept 29, 2024, 2:30:45 PM
+    console.log(date.toLocaleString()); // "9/29/2024, 2:30:45 PM"
+
+    For specific locals:
+    console.log(date.toLocaleString('en-US')); // "9/29/2024, 2:30:45 PM"
+    
+
+    toLocaleDateString()
+    - Formats only the DATE part (no time).
+    - Syntax: date.toLocaleDateString([locales], [options])
+    
+    Example:
+    const date = new Date(2024, 8, 29, 14, 30, 45);
+    console.log(date.toLocaleDateString()); // "9/29/2024"
+
+    For specific locals:
+    console.log(date.toLocaleDateString('en-US')); // "9/29/2024"
+
+
+    toLocaleTimeString()
+    - Formats only the TIME part (no date).
+    - Syntax: date.toLocaleTimeString([locales], [options])
+
+    Example:
+    const date = new Date(2024, 8, 29, 14, 30, 45);
+    console.log(date.toLocaleTimeString()); // "2:30:45 PM"
+    
+
+*/
 
 /*
 // Date Get Methods
@@ -78,7 +113,8 @@ console.log(years);
 // console.log(j);
 
 /*
-1. Display Current Date and Time
+1. Display Current Date and Time. Get the current date and time and display it in a readable format.
+Clue: Gagamit ng ibang method, nilagay ko sa taas :) Wala kase sa w3 schools sorry na agad :P
 */
 
 /*
