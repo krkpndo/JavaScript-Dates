@@ -141,6 +141,8 @@ Clue: Gagamit ng ibang method, nilagay ko sa taas :) Wala kase sa w3 schools sor
     // function getDayOfWeek(dateInput) {
     //     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     //     let d = new Date(dateInput);
+    //     console.log(d.getDay());
+        
     //     return days[d.getDay()];
     // }
 
@@ -155,6 +157,8 @@ Clue: Gagamit ng ibang method, nilagay ko sa taas :) Wala kase sa w3 schools sor
 
     //     let d = new Date();
     //     d.setMonth(monthNumber);
+    //     console.log(d);
+        
 
     //     return months[d.getMonth()];
     // }
@@ -194,7 +198,7 @@ Clue: Gagamit ng ibang method, nilagay ko sa taas :) Wala kase sa w3 schools sor
 7. Check if one date is before, after, or the same as another date.
 */
 
-    // let date1 = new Date(2025, 8, 29);
+    // let date1 = new Date(2025, 7, 29);
     // let date2 = new Date(2025, 8, 29);
 
     // if (date1 < date2) {
@@ -226,21 +230,77 @@ Clue: Gagamit ng ibang method, nilagay ko sa taas :) Wala kase sa w3 schools sor
     //     }
     // }
 
-    // console.log(daysInMonth(2, 2023));
+    // console.log(daysInMonth(2, 2024));
+
+//     function daysInMonth(date) {
+//         let dateMonth = date.getMonth() + 1;
+//         let dateYear = date.getFullYear();
+
+//         if (dateMonth != 1) {
+//             if (dateMonth == 4 || dateMonth == 6 || dateMonth == 9 || dateMonth == 11) {
+//                 return 30;
+//             }
+//             else {
+//                 return 31;
+//             } 
+//         } else {
+//             if (dateYear % 100 == 0) {
+
+//                 if (dateYear % 4 == 0) {
+
+//                     if (dateYear % 100 == 0 && dateYear % 400 == 0) {
+//                         return 29;
+
+//                     } else {
+//                         return 28;
+//                     }
+
+//                 } else {
+//                     return 28
+//                 }
+
+//             } else {
+
+//                 if (dateYear % 4 == 0) {
+//                     return 29;
+
+//                 } else {
+//                     return 28;
+//                 }
+                
+//             }
+
+//         }
+// }
+    
+//     console.log(daysInMonth(new Date("December 2, 2023")));
 
 /*
 9. Determine if a given year is a leap year or not.
 */
 
-    // function isLeapYear(year) {
-    //     if ((year % 4 == 0 && year % 400 == 0)) {
-    //             console.log(`${year} is a leap year`);
-    //         } else {
-    //             console.log(`${year} is not a leap year`);
-    //         }
-    //     }
+    function isLeapYear(year) {
+        let formatYear = year.toDateString()
+        let dateYear = year.getFullYear();
 
-    // isLeapYear(2023);
+        if (dateYear % 100 == 0) {
+            if (dateYear % 4 == 0) {
+                if (dateYear % 100 == 0 && dateYear % 400 == 0) {
+                    return `${formatYear} is a Leap Year`;
+                } else {
+                    return `${formatYear} is not a Leap Year`;
+                }
+            } return `${formatYear} is not a Leap Year`;
+        } else {
+            if (dateYear % 4 == 0) {
+                return `${formatYear} is a Leap Year`;
+            } else {
+                return `${formatYear} is not a Leap Year`;
+            }
+        }
+}
+
+    console.log(isLeapYear(new Date("December 2, 1996")));
 /*
 10. Calculate how many hours, minutes, and seconds remain until midnight.
 */
@@ -259,5 +319,6 @@ Clue: Gagamit ng ibang method, nilagay ko sa taas :) Wala kase sa w3 schools sor
     // console.log("Hours:", hours);
     // console.log("Minutes:", minutes);
     // console.log("Seconds:", seconds);
+
 
 
