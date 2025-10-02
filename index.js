@@ -319,6 +319,3 @@ Clue: Gagamit ng ibang method, nilagay ko sa taas :) Wala kase sa w3 schools sor
     // console.log("Hours:", hours);
     // console.log("Minutes:", minutes);
     // console.log("Seconds:", seconds);
-
-
-
